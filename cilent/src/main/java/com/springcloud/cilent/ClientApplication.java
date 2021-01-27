@@ -1,5 +1,6 @@
 package com.springcloud.cilent;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
@@ -8,6 +9,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 //@EnableEurekaClient
 //@RestController
 @EnableAspectJAutoProxy
+@MapperScan("com.springcloud.cilent.dao")
 public class ClientApplication {
 
     public static void main(String[] args) {
