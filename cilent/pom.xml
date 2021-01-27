@@ -8,18 +8,42 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <groupId>com.springcloud</groupId>
-    <artifactId>cilent</artifactId>
+    <artifactId>client</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>cilent</name>
+    <name>client</name>
     <description>Demo project for Spring Boot</description>
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.23</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.1.10</version>
+        </dependency>
+        <dependency>
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
     <build>
@@ -28,6 +52,27 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.liquibase</groupId>-->
+<!--                <artifactId>liquibase-maven-plugin</artifactId>-->
+<!--                <configuration>-->
+<!--                    &lt;!&ndash;指定数据库连接&ndash;&gt;-->
+<!--                    <propertyFile>${project.basedir}/src/main/resources/application.yml</propertyFile>-->
+<!--                    &lt;!&ndash;指定执行主文件&ndash;&gt;-->
+<!--                    <changeLogFile>${project.basedir}/src/main/resources/rq/shiro-demo_${project.version}-now.xml</changeLogFile>-->
+<!--                    <outputChangeLogFile>${project.basedir}/src/main/resources/rq/shiro-demo_${project.version}-now.xml</outputChangeLogFile>-->
+<!--                    &lt;!&ndash; 是否需要弹出确认框&ndash;&gt;-->
+<!--                    <promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>-->
+<!--                    &lt;!&ndash;输出文件的编码&ndash;&gt;-->
+<!--                    <outputFileEncoding>UTF-8</outputFileEncoding>-->
+<!--                    &lt;!&ndash;执行的时候是否显示详细的参数信息&ndash;&gt;-->
+<!--                    <verbose>true</verbose>-->
+<!--                    &lt;!&ndash;是否每次都重新加载properties&ndash;&gt;-->
+<!--                    <propertyFileWillOverride>true</propertyFileWillOverride>-->
+<!--                    <rollbackTag>${project.version}</rollbackTag>-->
+<!--                    <tag>${project.version}</tag>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 </project>

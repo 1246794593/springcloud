@@ -1,12 +1,16 @@
 server:
   port: 8763
-
+#spring:
+#  application:
+#    name: client
+#
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
 spring:
-  application:
-    name: client
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Hongkong
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource

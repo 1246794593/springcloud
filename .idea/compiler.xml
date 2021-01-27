@@ -6,12 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="cilent" />
         <module name="eurekaserver" />
-        <module name="service-feign" />
         <module name="service-ribbon" />
         <module name="service-zuul" />
+        <module name="cilent" />
+        <module name="service-feign" />
       </profile>
     </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cilent" options="-parameters" />
+      <module name="eurekaserver" options="-parameters" />
+      <module name="service-feign" options="-parameters" />
+      <module name="service-ribbon" options="-parameters" />
+      <module name="service-zuul" options="-parameters" />
+    </option>
   </component>
 </project>
