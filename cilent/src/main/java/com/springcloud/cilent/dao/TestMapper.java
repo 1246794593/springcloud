@@ -8,4 +8,5 @@ import java.util.List;
 @Repository
 public interface TestMapper {
     List<Test> select();
+    int delete();
 }
